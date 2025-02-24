@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ object.title }}</title>
+</head>
+<body>
+    <h1>{{ object.title }}</h1>
+    <p><strong>Author:</strong> {{ object.author }}</p>
+    <p><strong>Published on:</strong> {{ object.published_date }}</p>
+    <div>
+        {{ object.content }}
+    </div>
+    <br>
+    <a href="{% url 'blog-list' %}">Back to Blog List</a>
+</body>
+</html>

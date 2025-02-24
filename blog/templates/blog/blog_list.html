@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog List</title>
+</head>
+<body>
+    <h1>All Blog Posts</h1>
+    <a href="{% url 'blog-create' %}">Create New Post</a>
+    <ul>
+        {% for blog in blogs %}
+            <li>
+                <a href="{% url 'blog-detail' blog.id %}">{{ blog.title }}</a>
+                by {{ blog.author }} on {{ blog.published_date }}
+            </li>
+        {% empty %}
+            <li>No blog posts yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+
+

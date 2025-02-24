@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create a New Blog Post</title>
+</head>
+<body>
+    <h1>New Blog Post</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Publish</button>
+    </form>
+    <br>
+    <a href="{% url 'blog-list' %}">Cancel</a>
+</body>
+</html>
+
+
